@@ -10,85 +10,158 @@
             background-color: Green;
             text-align: left;
             padding: 10px;
+            position: relative;
         }
-        
+
+        .search-bar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px; /* Aumenta a largura da barra de pesquisa */
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .search-button {
+            position: absolute;
+            top: 50%;
+            left: calc(50% + 160px); /* Posiciona o botão de pesquisa ao lado da barra */
+            transform: translateY(-50%);
+            background-color: ForestGreen; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            border: none;
+            border-radius: 4px;
+            padding: 5px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #45a049; /* Cor do botão ao passar o mouse */
+        }
+
+        .login-button {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: ForestGreen;
+            color: black;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-size: 15px;
+            border-radius: 40px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .login-button:hover {
+            background-color: #45a049; /* Cor do botão ao passar o mouse */
+        }
+
+        .login-text {
+            margin-right: 5px; /* Adiciona espaço entre a imagem e o texto */
+        }
+
+        .login-image {
+            width: 20px; /* Ajusta o tamanho da imagem */
+            vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+        }
+
         .menu2 {
             background-color: ForestGreen;
             text-align: center;
             overflow: hidden;
-            position: relative;
-            padding: 20px; /* Aumenta o espaço interno */
-            border-radius: 10px; /* Adiciona bordas arredondadas */
-            margin-bottom: 20px; /* Aumenta o espaço entre os retângulos */
         }
-        
-        .menu3 {
-            background-color: ForestGreen;
-            text-align: center;
-            padding: 10px;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        
-        .menu4 {
-            margin-top: 20px;
+
+        .menu3{
+            margin-top: 35px;
             text-align: center;
             font-size: 20px;
-        }
-        
+            
+        }       
+
+
         .topnav {
             overflow: hidden;
             background-color: ForestGreen;
         }
-        
+
         .topnav a {
             color: white;
             text-decoration: none;
             padding: 14px 16px;
-            background-color: Green;
+            background-color: Green; /* Adicionado para manter a cor de fundo */
             border-radius: 5px;
             margin: 0 5px;
         }
-        
-        .button {
-            background-color: #4CAF50;
+
+        .button1 {
+            background-color: ForestGreen;
             border: none;
-            color: white;
-            padding: 15px 32px;
+            color: black;
+            padding: 5px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            font-size: 15px;
+            margin: 2px 1px;
             cursor: pointer;
-            border-radius: 8px;
+            border-radius: 40px;
         }
-        
-        .button:hover {
-            background-color: #45a049;
+
+        .button1:hover {
+            background-color: #45a049; /* Cor do botão ao passar o mouse */
         }
-        
+
         img {
-            width: 50px;
+            width: 100px;
         }
+        .box2{ /*pequenos botoes*/
+            height:30px;
+        }
+
+        .mapa iframe{
+            left:210px;
+            top: 200px;;
+            height:470px;
+            width:70%;
+            position:absolute;
+            box-shadow: 0 0 15px #002f00;
+            border: 25px solid ForestGreen;
+        }
+
     </style>
 </head>
 <body>
     <div class="menu1 box1">
-        <img src="acessar.png">
+        <input type="text" class="search-bar" placeholder="acessobilizando.com.br">
+        <button class="search-button">Pesquisar</button> <!-- Botão de pesquisa -->
+        <a href="login.html" class="login-button">
+            <img src="imagem/login.png" alt="Login" class="login-image">
+            <span class="login-text">Login</span>
+        </a>
+        <img src="imagem/acessar.png">
     </div>
     <div class="menu2 box2">
-        <div class="topnav">
-            <a href="#" style="background-color: Green;">Lugar</a>
-            <a href="#">Comentário</a>
-            <a href="#">Mapa</a>
-        </div>
         <div class="button-container">
-            <button class="button">Lugar</button>
+            <a href="lugar.html" class="button1">Lugar</a>
+            <a href="comentario.html" class="button1">Comentários</a>
+            <a href="mapa.html" class="button1">Mapa</a>
         </div>
     </div>
-    <div class="menu3 box1">
-        <a href="#" class="button">ACESSIBILIDADE</a>
+    <div class="menu3 ">
+        <h1> MAPA</h1>
     </div>
+    <div class="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13939.053862651102!2d-51.2108496!3d-29.14216635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1714238070267!5m2!1spt-BR!2sbr"
+     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
 </body>
 </html>

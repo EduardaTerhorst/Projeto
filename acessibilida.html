@@ -6,12 +6,37 @@
     <meta name="description" content="Lugares com Acessibilidade">
     <title>AcessoBilizando</title>
     <style>
-        .menu1 {
+        .menu1 { 
             background-color: Green;
             text-align: left;
             padding: 10px;
             position: relative;
         }
+
+        .menu2 {
+            background-color: ForestGreen;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .menu3 { /* titulo acessibilidade*/
+            text-align: center;
+            padding-top: 40px;
+            font-size: 20px;
+        }
+
+        .menu4, .menu5 {
+            width: 30%; /* Define a largura de cada coluna */
+            float: right; /* Coloca as colunas uma ao lado da outra */
+            text-align: left;
+            padding: 120px 120px; /* Ajusta o espaçamento interno */
+
+        }
+
+        .menu4 h1, .menu5 h1 {
+            margin: 0; /* Remove a margem padrão das tags h1 */
+        }
+
 
         .search-bar {
             position: absolute;
@@ -44,60 +69,7 @@
         .search-button:hover {
             background-color: #45a049; /* Cor do botão ao passar o mouse */
         }
-
-        .login-button {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            background-color: ForestGreen;
-            color: black;
-            padding: 5px 10px;
-            text-decoration: none;
-            font-size: 15px;
-            border-radius: 40px;
-            cursor: pointer;
-            border: none;
-        }
-
-        .login-button:hover {
-            background-color: #45a049; /* Cor do botão ao passar o mouse */
-        }
-
-        .login-text {
-            margin-right: 5px; /* Adiciona espaço entre a imagem e o texto */
-        }
-
-        .login-image {
-            width: 20px; /* Ajusta o tamanho da imagem */
-            vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
-        }
-
-        .menu2 {
-            background-color: ForestGreen;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .menu4 {
-            margin-top: 500px;
-            text-align: center;
-            font-size: 20px;
-        }
-
-        .topnav {
-            overflow: hidden;
-            background-color: ForestGreen;
-        }
-
-        .topnav a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 16px;
-            background-color: Green; /* Adicionado para manter a cor de fundo */
-            border-radius: 5px;
-            margin: 0 5px;
-        }
+        
 
         .button1 {
             background-color: ForestGreen;
@@ -145,7 +117,7 @@
     </style>
 </head>
 <body>
-    <div class="menu1 box1">
+    <div class="menu1 ">
         <input type="text" class="search-bar" placeholder="acessobilizando.com.br">
         <button class="search-button">Pesquisar</button> <!-- Botão de pesquisa -->
         
@@ -153,12 +125,24 @@
     </div>
     <div class="menu2 box2">
         <div class="button-container">
-            <button class="button1">Lugar</button>
-            <button class="button1">Comentários</button>
-            <button class="button1">Mapa</button>
+            <a href="lugar.html" class="button1">Lugar</a>
+            <a href="comentario.html" class="button1">Comentarios</a>
+            <a href="mapa.html" class="button1">Mapa</a>
         </div>
     </div>
-   
+    <div class="menu3">
+        <h1>O QUE É ACESSIBILIDADE?</h1>
+    </div>
+    <div class="menu4 ">
+        <h1> Eduarda Salvador terhorst Eduarda Salvador terhorstEduarda Salvador terhorst Eduarda Salvador terhorst Eduarda Salvador terhorst
+            Eduarda Salvador terhorst Eduarda Salvador terhorst Eduarda Salvador terhorst Eduarda Salvador terhorst
+            Eduarda Salvador terhorst Eduarda Salvador terhorst Eduarda Salvador terhorst.</h1>
+    </div>
+    <div class="menu5 ">
+        <h1> Eduarda Salvador terhorst Eduarda Salvador terhorstEduarda Salvador terhorst Eduarda Salvador terhorst Eduarda Salvador terhorst
+            Eduarda Salvador terhorst Eduarda Salvador terhorst Eduarda Salvador terhorst Eduarda Salvador terhorst
+            Eduarda Salvador terhorst Eduarda Salvador terhorst Eduarda Salvador terhorst.</h1>
+    </div>
     
 </body>
 </html>
