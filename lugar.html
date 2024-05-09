@@ -7,20 +7,53 @@
     <title>AcessoBilizando</title>
     <style>
         .menu1 {
-            background-color: Green;
+            background-color: #5EAD3C;
             text-align: left;
             padding: 10px;
-            overflow: hidden; /* Adicionado para limpar floats */
+            position: relative;
+        }
+
+        .search-bar {
+            position: absolute;
+            top: 50%;
+            left:  47%;
+            transform: translate(-50%, -50%);
+            width: 300px; /* Aumenta a largura da barra de pesquisa */
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .search-button {
+            position: absolute;
+            top: 50%;
+            left: calc( 47% + 160px); /* Posiciona o botão de pesquisa ao lado da barra */
+            transform: translateY(-50%);
+            background-color: ForestGreen; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            border: none;
+            border-radius: 4px;
+            padding: 5px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #45a049; /* Cor do botão ao passar o mouse */
         }
 
         .login-button {
-            float: right; /* Posiciona o botão à direita */
-            margin-top: 5px; /* Ajusta o alinhamento vertical */
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
             background-color: ForestGreen;
             color: black;
             padding: 5px 10px;
             text-decoration: none;
-            display: inline-block;
             font-size: 15px;
             border-radius: 40px;
             cursor: pointer;
@@ -45,13 +78,19 @@
             text-align: center;
             overflow: hidden;
         }
-
-        .menu4 {
-            margin-top: 500px;
-            text-align: center;
-            font-size: 20px;
+        .menu3{ /*quadrado verde do fundo*/
+            background: #73AD21;
+            width: 400px;
+            height: 412px;
+            margin-left: 36%;
+            margin-right: 30%;
+            margin-top: 100px;
+            padding: 10px 10px 10px 10px;
+            box-shadow: 0 0 20px #002f00;
+            border-radius: 20px;
         }
-
+        
+    
         .topnav {
             overflow: hidden;
             background-color: ForestGreen;
@@ -84,22 +123,25 @@
             background-color: #45a049; /* Cor do botão ao passar o mouse */
         }
 
-        .button2 {
-            background-color: ForestGreen;
+        .button2{ /*botões dos lugares*/
+            background: #cdf890;
             border: none;
             color: black;
-            padding: 15px 32px;
+            width: 120px;
+            height: 25px;
+            padding: 12px 34%;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 15px;
-            margin: 4px 2px;
+            font-size: 20px;
+            margin: 10px 1px;
             cursor: pointer;
             border-radius: 40px;
+            transition: transform 200ms ease-in-out;
         }
 
         .button2:hover {
-            background-color: #45a049; /* Cor do botão ao passar o mouse */
+            transform: scale(1.03);
         }
 
         img {
@@ -113,21 +155,28 @@
 </head>
 <body>
     <div class="menu1 box1">
-        <a href="#" class="login-button">
+        <input type="text" class="search-bar" placeholder="acessobilizando.com.br">
+        <button class="search-button">Pesquisar</button> <!-- Botão de pesquisa -->
+        <a href="login.html" class="login-button">
+            <img src="imagem/login.png" alt="Login" class="login-image">
             <span class="login-text">Login</span>
-            <img class="login-image" src="imagem/login.png" alt="Login">
         </a>
         <img src="imagem/acessar.png">
     </div>
     <div class="menu2 box2">
         <div class="button-container">
-            <button class="button1">Lugar</button>
-            <button class="button1">Comentários</button>
-            <button class="button1">Mapa</button>
+            <a href="lugar.html" class="button1">Lugar</a>
+            <a href="comentario.html" class="button1">Comentários</a>
+            <a href="mapa.html" class="button1">Mapa</a>
         </div>
     </div>
-    <div class="menu4 box1">
-        <a href="#" class="button2">ACESSIBILIDADE</a>
+    <div class="menu3">
+        <a href="restaurantelugar.html" class="button2">RESTAURANTE </a>
+        <a href="parque.html" class="button2">PARQUE </a>
+        <a href="mercado.html" class="button2">MERCADO </a>
+        <a href="farmacias.html" class="button2">FARMACIAS</a>
+        <a href="universidades.html" class="button2">UNIVERSIDADES</a>
+        <a href="escolas.html" class="button2">ESCOLAS</a>
     </div>
 </body>
 </html>
